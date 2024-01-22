@@ -1,5 +1,0 @@
-1. gedit prog.tcl
-2. ns prog.tcl
-3. vi prog.tr
-	:q //EXIT
-4. awk -f prog.awk prog.tr
