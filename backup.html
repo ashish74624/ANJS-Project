@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="FormApp">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delhi Public School</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-300" ng-controller="FormController">
+<body class="bg-gray-300">
   <form class="w-[70vw] bg-white min-h-96 border-4 border-black p-2 h-max pb-8 mx-auto mt-4">
     <div class="flex justify-between">
       <img class="h-40 ml-10" src="/dps.png" alt="">
@@ -20,19 +20,20 @@
         <p class="text-lg flex justify-center">Session 2023-24</p>
       </div>
     </div>
-    <div class="mt-2 flex justify-between px-16">
-      <div class="w-max h-36 border border-black">
+    <div class="mt-2 flex justify-between px-16 ">
+      <div  class="w-max h-36 border border-black">
         <div class="w-full h-8 flex justify-center border-b border-black">FATHER</div>
         <input type="file" id="fileInput_F" accept=".png, .jpg, .jpeg, .webp" class="h-28 w-full flex mt-2 mx-4" name="fileInput_F">
       </div>
-      <div class="w-max h-36 border border-black">
+      <div  class="w-max h-36 border border-black">
         <div class="w-full h-8 flex justify-center border-b border-black">MOTHER</div>
         <input type="file" id="fileInput_M" accept=".png, .jpg, .jpeg, .webp" class="h-28 w-full flex flex-col w-max mt-2 mx-4" name="fileInput_M">
       </div>
-      <div class="w-max h-36 border border-black">
+      <div  class="w-max h-36 border border-black">
         <div class="w-full h-8 flex justify-center border-b border-black">CHILD</div>
         <input type="file" id="fileInput_C" accept=".png, .jpg, .jpeg, .webp" class="h-28 w-full flex mt-2 mx-4" name="fileInput_C">
       </div>
+      
     </div>
     <p class="font-bold text-md ml-8">Parents are requested to note that :</p>
     <ul class="list-disc">
@@ -66,6 +67,7 @@
           <input id="female" name="gender" type="radio" value="Female"   />
         </div>
       </div>
+
       <div class="flex border-b border-black">
         <label class="border-r border-black w-96 pl-4" for="Nationality">Nationality</label>
         <input name="Nationality" class=" pl-4" type="text"   />
@@ -99,12 +101,12 @@
     <div class="m-5 border-2 h-max border-black mt-10">
       <h3 class="font-bold text-lg border-b border-black px-4">2. FATHER'S PARTICULARS </h3>
       <div class="flex border-b border-black">
-        <label class="border-r border-black w-96 pl-4" for="fatherName">NAME</label>
-        <input name="fatherName" class="w-96 pl-4" type="text"   />
+        <label class="border-r border-black w-96 pl-4" for="studentName">NAME</label>
+        <input name="studentName" class="w-96 pl-4" type="text"   />
       </div>
       <div class="flex border-b border-black">
         <label class="border-r border-black w-96 pl-4" for="academics">ACADEMIC QUALIFICATIONS </label>
-        <input name="academics" class="w-96 pl-4" type="text"   />
+        <input name="dob" class="w-96 pl-4" type="academics"   />
       </div>
       <div class="flex border-b border-black">
         <label class="border-r border-black w-96 pl-4" for="lastSchool">LAST SCHOOL ATTENDED </label>
@@ -114,6 +116,7 @@
         <label class="border-r border-black w-96 pl-4" for="clg">COLLEGE / UNIVERSITY</label>
         <input name="clg" class="w-96 pl-4" type="text"   />
       </div>
+
       <div class="flex border-b border-black">
         <label class="border-r border-black w-96 pl-4" for="occupation">OCCUPATION </label>
         <input name="occupation" class="w-96 pl-4" type="text"   />
@@ -122,43 +125,25 @@
         <label class="border-r border-black w-96 pl-4" for="designation">DESIGNATION</label>
         <input name="designation" class="w-96 pl-4" type="text"   />
       </div>
+      
       <div class="flex border-b border-black">
         <label class="border-r border-black w-96 pl-4" for="Ofc_Address">OFFICE ADDRESS</label>
         <input name="Ofc_Address" class="w-96 pl-4" type="text"   />
       </div>
       <div class="flex border-b border-black">
-        <label class="border-r border-black px-6 " for="fatherTel">Telephone No.</label>
-        <input name="fatherTel" class="pl-4 border-r border-black " type="number"   />
-        <label class="border-r border-black px-6" for="fatherMob">Mobile No.</label>
-        <input name="fatherMob" class="pl-4 border-r border-black" type="number"   />
-        <label class="border-r border-black px-6 " for="fatherEmail">Email</label>
-        <input name="fatherEmail" class="pl-4" type="email"   />
+        <label class="border-r border-black px-6 " for="Address">Telephone No.</label>
+        <input name="Telephone No." class="pl-4 border-r border-black " type="number"   />
+        <label class="border-r border-black px-6" for="Address">Mobile No.</label>
+        <input name="Father Mobile Number" class="pl-4 border-r border-black" type="number"   />
+        <label class="border-r border-black px-6 " for="email">Email</label>
+        <input name="email" class="pl-4" type="email"   />
       </div>
     </div>
-    <button type="button" class="bg-black text-white px-6 py-2 mx-5 rounded-md" ng-click="checkForm()">
+   </div>
+   <button type="submit" class="bg-black text-white px-6 py-2 mx-5 rounded-md">
       Submit
-    </button>
+   </button>
   </form>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-  <script>
-    angular.module('FormApp', [])
-      .controller('FormController', function($scope) {
-        $scope.checkForm = function() {
-          var requiredFields = ['studentName', 'dob', 'age', 'gender', 'Nationality', 'Category', 'Address', 'fatherName', 'academics', 'lastSchool', 'clg', 'occupation', 'designation', 'Ofc_Address', 'fatherTel', 'fatherMob', 'fatherEmail'];
-
-          var incompleteFields = requiredFields.filter(function(field) {
-            var value = document.getElementsByName(field)[0].value;
-            return !value || value.trim() === '';
-          });
-
-          if (incompleteFields.length > 0) {
-            alert("Incomplete fields: " + incompleteFields.join(', '));
-          } else {
-            alert("Complete");
-          }
-        };
-      });
-  </script>
 </body>
 </html>
+
